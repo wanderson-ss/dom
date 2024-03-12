@@ -1,0 +1,35 @@
+<label for="time">Informe o time  </label>
+<select id="time">
+  <option value="">--selecione o seu time--</option>
+  <option value="fluminense">Fluminense</option>
+  <option value="santos">Santos</option>
+  <option value="vasco">Vasco</option>
+  <option value="overcast">Overcast</option>
+</select>
+
+
+<script>
+    var select = document.querySelector("select");
+    var para = document.querySelector("p");
+    
+    select.addEventListener("change", setTime);
+    
+    function setTime() {
+      var choice = select.value;
+    
+      if (choice === "fluminense") {
+        para.textContent =
+          "O Fluminense Football Club, popularmente referido por seus apelidos Nense,.";
+      } else if (choice === "santos") {
+        para.textContent =
+          "O Santos Futebol Clube, mais conhecido como Santos";
+      } else if (choice === "vasco") {
+        para.textContent =
+          "O Club de Regatas Vasco da Gama mais conhecido apenas por Vasco da Gama";
+    
+      } else {
+        para.textContent = "";
+      }
+    }
+
+</script>
